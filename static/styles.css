@@ -54,3 +54,37 @@ li {
     background-color: #282828;
     border-radius: 4px;
 }
+
+.song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adds space between each song entry */
+}
+
+.song-item span {
+    font-size: 20px; /* Increase number size */
+    font-weight: bold;
+    margin-right: 15px; /* Spacing between number and image */
+}
+
+.song-item img {
+    margin-right: 10px;
+    border-radius: 5px; /* Slightly rounded album cover */
+}
+
+.artist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Adds space between each song entry */
+}
+
+.artist-item span {
+    font-size: 20px; /* Increase number size */
+    font-weight: bold;
+    margin-right: 15px; /* Spacing between number and image */
+}
+
+.artist-item img {
+    margin-right: 10px;
+    border-radius: 5px; /* Slightly rounded album cover */
+}
