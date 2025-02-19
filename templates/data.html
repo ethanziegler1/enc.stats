@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
     <link rel="stylesheet" href="static/styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -26,7 +28,11 @@
                 <h2>Top Songs</h2>
                 <ul>
                     {% for song in top_songs %}
-                        <li>{{ song.name }} - {{ song.artists[0].name if song.artists else 'Unknown Artist' }} ({{ song.popularity }}%)</li>
+                    <li>
+                        <img src="{{ song.album.images[0].url }}" alt="{{ song.name }}" width="50" height="50">
+                        {{ song.name }} - {{ song.artists[0].name if song.artists else 'Unknown Artist' }} ({{
+                        song.popularity }}%)
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -34,7 +40,8 @@
                 <h2>Top Albums</h2>
                 <ul>
                     {% for album in top_albums %}
-                        <li>{{ album.name }} - {{ album.artists[0].name if album.artists else 'Unknown Artist' }} ({{ album.popularity }}%)</li>
+                    <li>{{ album.name }} - {{ album.artists[0].name if album.artists else 'Unknown Artist' }} ({{
+                        album.popularity }}%)</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -42,11 +49,15 @@
                 <h2>Top Artists</h2>
                 <ul>
                     {% for artist in top_artists %}
-                        <li>{{ artist.name }} ({{ artist.popularity }}%)</li>
+                    <li>
+                        <img src="{{ artist.images[0].url }}" alt="{{ artist.name }}" width="50" height="50">
+                        {{ artist.name }} ({{ artist.popularity }}%)
+                    </li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
     </div>
 </body>
+
 </html>
