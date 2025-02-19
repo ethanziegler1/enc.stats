@@ -12,13 +12,16 @@
             align-items: center;
             text-align: center;
         }
+
         .artist-item img {
             margin-right: 10px;
         }
+
         .song-item {
             display: flex;
             align-items: center;
         }
+
         .song-item img {
             margin-right: 10px;
         }
@@ -33,7 +36,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Search</a></li>
-                    <li><a href="#">Your Library</a></li>
+                    <li><a href="{{ url_for('artists') }}" class ="artists-button">Artists</a></li>
                     <li><a href="{{ url_for('logout') }}" class="logout-button">Logout</a></li>
                 </ul>
             </nav>
@@ -58,15 +61,6 @@
                 </ul>
             </div>
             <div>
-                <h2>Top Artists</h2>
-                <ul>
-                    {% for artist in top_artists %}
-                    <li class="artist-item">
-                        <img src="{{ artist.images[0].url }}" alt="{{ artist.name }}" width="50" height="50">
-                        {{ artist.name }}
-                    </li>
-                    {% endfor %}
-                </ul>
             </div>
         </div>
     </div>

@@ -63,6 +63,10 @@ def logout():
     session.clear()
     return redirect(url_for("home"))
 
+@app.route("/artists")
+def artists():
+    return render_template("artists.html")
+
 
 
 if __name__ == "__main__":
