@@ -65,8 +65,16 @@ def logout():
 
 @app.route("/artists")
 def artists():
-    return render_template("artists.html")
+    """Display top artists."""
+    token_info = session.get("token_info", None)
+    if not token_info:
+        return redirect(url_for("home"))
 
+    sp = Spotify(auth=token_info["access_token"])
+    user = sp.current_user()
+    top_artists = sp.current_user_top_artists(limit=10)["items"]
+
+    return render_template("artists.html", user=user, top_artists=top_artists)
 
 
 if __name__ == "__main__":
