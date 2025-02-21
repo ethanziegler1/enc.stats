@@ -6,26 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
     <link rel="stylesheet" href="static/styles.css">
-    <style>
-        .artist-item {
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-
-        .artist-item img {
-            margin-right: 10px;
-        }
-
-        .song-item {
-            display: flex;
-            align-items: center;
-        }
-
-        .song-item img {
-            margin-right: 10px;
-        }
-    </style>
 </head>
 
 <body>
@@ -51,7 +31,7 @@
                 <li class="song-item">
                     <span>{{ loop.index }}.</span>  <!-- Adding the number before the image -->
                     <img src="{{ song.album.images[0].url }}" alt="{{ song.name }}" width="50" height="50">
-                    {{ song.name }} - {{ song.artists[0].name if song.artists else 'Unknown Artist' }}
+                    <p>{{ song.name }} - {{ song.artists[0].name if song.artists else 'Unknown Artist' }}</p>
                 </li>
                 {% endfor %}
                 </ul>
