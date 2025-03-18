@@ -1,4 +1,4 @@
-# enc.stats 🎵 
+# 🎵 enc.stats 
 
 A lightweight **Flask** web application that connects to a user's **Spotify account** and provides a detailed rundown of their listening habits. Built with **Spotipy**, this app fetches and displays top artists, albums, and tracks over different time ranges.  
 
