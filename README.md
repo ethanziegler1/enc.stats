@@ -9,10 +9,9 @@ A lightweight **Flask** web application that connects to a user's **Spotify acco
 - ⚡ **Minimal & Fast** – Small Flask backend with efficient API calls  
 
 ## 🛠 Tech Stack  
-- **Backend:** Python (Flask, Spotipy)  
-- **API:** Spotify Web API  
-- **Frontend:** HTML, CSS, JavaScript  
-- **Deployment:** Works with **Render, Heroku, or any Flask-compatible platform**  
+- **Backend:** Python (Flask)  
+- **API:** Spotify Web API  (using Spotipy Python Package)
+- **Frontend:** HTML, CSS
 
 ## 📥 Installation & Setup  
 
