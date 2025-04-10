@@ -1,74 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        /* Fullscreen Background */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            color: white;
-            margin: 0;
-            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2838);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
-        }
-
-        /* Background Animation */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .login-container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .login-container h1 {
-            margin-bottom: 15px;
-            font-size: 26px;
-        }
-
-        .login-container p {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .login-container button {
-            background-color: #1db954;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .login-container button:hover {
-            background-color: #1ed760;
-            transform: scale(1.05);
-        }
-
-        .login-container a {
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
+{%extends 'base.html'%}
+{%block content%}
+<div class="login-bg">
     <div class="login-container">
         <h1>Welcome to EncStats</h1>
         <p>Click below to login with Spotify and view your data.</p>
@@ -76,5 +8,5 @@
             <button>Login with Spotify</button>
         </a>
     </div>
-</body>
-</html>
+</div>
+{%endblock%}

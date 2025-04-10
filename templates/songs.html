@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block content%}
+<body>
+    {%include 'header.html'%}
+    <div class="container">
+        <div class="content">
+            <div class="playlist">
+                <h2>Top Songs</h2>
+                <ul>
+                    {% for song in top_songs %}
+                <li class="song-item">
+                    <span>{{ loop.index }}.</span>  <!-- Adding the number before the image -->
+                    <img src="{{ song.album.images[0].url }}" alt="{{ song.name }}" width="50" height="50">
+                    <p>{{ song.name }} - {{ song.artists[0].name if song.artists else 'Unknown Artist' }}</p>
+                </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2></h2>
+                <ul>
+                </ul>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</body>
+{%endblock%}

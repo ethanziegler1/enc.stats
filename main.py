@@ -21,13 +21,20 @@ scope = "user-read-private user-read-email user-top-read user-read-recently-play
 
 cache_handler = FlaskSessionCacheHandler(session)
 sp_oauth = SpotifyOAuth(
-    client_id, client_secret, redirect_uri, scope=scope, cache_handler=cache_handler, show_dialog=True
+    client_id,
+    client_secret,
+    redirect_uri,
+    scope=scope,
+    cache_handler=cache_handler,
+    show_dialog=True,
 )
+
 
 @app.route("/")
 def home():
     """Render home.html where user can click login."""
     return render_template("home.html")
+
 
 @app.route("/login")
 def login():
@@ -35,15 +42,17 @@ def login():
     auth_url = sp_oauth.get_authorize_url()
     return redirect(auth_url)
 
+
 @app.route("/callback")
 def callback():
     """Handle Spotify OAuth callback and store the token."""
     session["token_info"] = sp_oauth.get_access_token(request.args["code"])
-    return redirect(url_for("data"))
+    return redirect(url_for("songs"))
 
-@app.route("/data")
-def data():
-    """Display user data after successful login."""
+
+@app.route("/songs")
+def songs():
+    """Display users top songs after successful login."""
     token_info = session.get("token_info", None)
     if not token_info:
         return redirect(url_for("home"))  # Redirect to home if not logged in
@@ -54,14 +63,16 @@ def data():
     top_artists = sp.current_user_top_artists(limit=10)["items"]
 
     return render_template(
-        "data.html", user=user, top_songs=top_songs, top_artists=top_artists
+        "songs.html", user=user, top_songs=top_songs, top_artists=top_artists
     )
+
 
 @app.route("/logout")
 def logout():
     """Log out and clear session."""
     session.clear()
     return redirect(url_for("home"))
+
 
 @app.route("/artists")
 def artists():
@@ -75,6 +86,18 @@ def artists():
     top_artists = sp.current_user_top_artists(limit=10)["items"]
 
     return render_template("artists.html", user=user, top_artists=top_artists)
+
+
+@app.route("/search")
+def search():
+    """Search for a song or artist."""
+    token_info = session.get("token_info", None)
+    if not token_info:
+        return redirect(url_for("home"))
+    sp = Spotify(auth=token_info["access_token"])
+    user = sp.current_user()
+    lucki = sp.search("lucki", type="track")
+    return render_template("search.html", user=user, lucki=lucki)
 
 
 if __name__ == "__main__":
