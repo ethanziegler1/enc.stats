@@ -3,18 +3,16 @@ import os
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.cache_handler import FlaskSessionCacheHandler
-from dotenv import load_dotenv
-
-load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.urandom(64)
 
 # Set redirect URI based on environment
-redirect_uri = "https://encstats.vercel.app/callback"
-# if os.getenv("FLASK_ENV") == "production"
-# else "http://127.0.0.1:5000/callback"
-
+redirect_uri = (
+    "https://encstats.vercel.app/callback"
+    if os.getenv("FLASK_ENV") == "production"
+    else "http://127.0.0.1:5000/callback"
+)
 
 # Spotify API credentials (Use environment variables)
 client_id = os.getenv("CLIENT_ID")
