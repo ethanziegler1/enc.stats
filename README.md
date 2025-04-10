@@ -30,14 +30,17 @@ A lightweight **Flask** web application that connects to a user's **Spotify acco
 **Here is a demonstration of what our app provides the user!**
 1. **First you are prompted with a welcome screen that gives you the option to sign into Spotify**
    
-![image](https://github.com/user-attachments/assets/058f808a-b9ed-41b5-8e52-630140bc9406)
+![Screenshot 2025-03-18 171454](https://github.com/user-attachments/assets/28448fdb-e52f-4af0-8a99-cc840d6b59e3)
+
 
 
 2.**Then you will be routed to Spotify's OAuth page that verifies the user exists in Spotify's databases**
 
-![image](https://github.com/user-attachments/assets/3d2fd1fd-8982-4126-af5f-06902422f387)
+![Screenshot 2025-03-18 171518](https://github.com/user-attachments/assets/0e1ab8d3-081e-4fad-9f65-7c55acc93d55)
+
 
 
 3.**Finally, all of your data is shown in a neat and user-friendly way with options to see top artists, songs, or albums**
 
-![image](https://github.com/user-attachments/assets/fa9dce66-7bc5-4bca-9878-219aae632af6)
+![Screenshot 2025-03-18 171748](https://github.com/user-attachments/assets/fca69d5a-6e28-4ba7-adf8-2166e856888b)
+
