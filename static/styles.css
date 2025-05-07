@@ -1,3 +1,7 @@
+html{
+    height: 100%;
+    margin:0;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -67,17 +71,24 @@ header {
 .nav-list li a:active {
     color: #1db954;
 }
+.welcome-msg{
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 50px;
+}
 .content {
     margin-top: 40px;
 }
-.playlist {
+.list {
     background-color: #181818;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
-.playlist h2 {
+.list h2 {
     margin-top: 0;
+}
+.list p{
+    margin-left: 10px;
 }
 
 ul {
@@ -159,9 +170,7 @@ li {
 .artist-item img {
     margin-right: 10px;
 }
-.playlist p{
-    margin-left: 10px;
-}
+
 /* Fullscreen Background */
 .login-bg {
     display: flex;
@@ -221,4 +230,22 @@ li {
 
 .login-container a {
     text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    vertical-align: middle;
+}
+.search-text{
+    border-radius: 10px;
+    text-align: center;
+    width: 25rem;
+    height: 3rem;
+}
+.search-button{
+    border-radius: 50%;
+    width: 50px;
 }

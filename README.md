@@ -17,7 +17,7 @@ A lightweight **Flask** web application that connects to a user's **Spotify acco
 
 1. **Clone the repository:**  
    ```sh
-   git clone https://github.com/cpritt/spotipy-flask-app.git  
+   git clone https://github.com/cpritt/enc.stats  
    cd enc.stats
 2. **Install Requirements into a Virtual Environment of your choice**
    ```sh

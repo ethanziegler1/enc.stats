@@ -15,8 +15,8 @@ redirect_uri = (
 )
 
 # Spotify API credentials (Use environment variables)
-client_id = "da6a918341704836931958964e9f8cf9"
-client_secret = "f8e8786b555d446aa2cb28e3800234e3"
+client_id = os.getenv("client_id")
+client_secret = os.getenv("client_secret")
 scope = "user-read-private user-read-email user-top-read user-read-recently-played user-library-read user-library-modify user-read-playback-state user-modify-playback-state"
 
 cache_handler = FlaskSessionCacheHandler(session)
