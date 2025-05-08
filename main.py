@@ -3,7 +3,9 @@ import os
 from spotipy import Spotify
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy.cache_handler import FlaskSessionCacheHandler
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.urandom(64)
 
@@ -15,8 +17,12 @@ redirect_uri = (
 )
 
 # Spotify API credentials (Use environment variables)
-client_id = os.getenv("client_id")
-client_secret = os.getenv("client_secret")
+client_id = os.getenv("CLIENT_ID")
+if not client_id:
+    raise ValueError("CLIENT_ID environment variable not set")
+client_secret = os.getenv("CLIENT_SECRET")
+if not client_secret:
+    raise ValueError("CLIENT_SECRET environment variable not set")
 scope = "user-read-private user-read-email user-top-read user-read-recently-played user-library-read user-library-modify user-read-playback-state user-modify-playback-state"
 
 cache_handler = FlaskSessionCacheHandler(session)
