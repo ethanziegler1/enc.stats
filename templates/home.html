@@ -1,12 +1,11 @@
-{%extends 'base.html'%}
-{%block content%}
+{%extends 'base.html'%} {%block content%}
 <div class="login-bg">
-    <div class="login-container">
-        <h1>Welcome to EncStats</h1>
-        <p>Click below to login with Spotify and view your data.</p>
-        <a href="{{ url_for('login') }}">
-            <button>Login with Spotify</button>
-        </a>
-    </div>
+  <div class="login-container">
+    <h1>Welcome to EncStats</h1>
+    <p>Click below to login with Spotify and view your data.</p>
+    <a href="{{ url_for('login') }}">
+      <button>Login with Spotify</button>
+    </a>
+  </div>
 </div>
 {%endblock%}

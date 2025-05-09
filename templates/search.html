@@ -1,13 +1,17 @@
-{%extends 'base.html'%}
-{%block content%}
+{%extends 'base.html'%} {%block content%}
 <body>
-    {%include 'header.html'%}
-    <div class="search-container">
-        <div class="content">
-            <input type="text" class="search-text" placeholder="Search for artists, albums, or tracks..." id="search-input">
-            <button id="search-button">Search</button>
-        </div>
+  {%include 'header.html'%}
+  <div class="search-container">
+    <div class="content">
+      <input
+        type="text"
+        class="search-text"
+        placeholder="Search for artists, albums, or tracks..."
+        id="search-input"
+      />
+      <button id="search-button">Search</button>
     </div>
-    <script src="js/search.js"></script>
+  </div>
+  <script src="js/search.js"></script>
 </body>
 {%endblock%}
