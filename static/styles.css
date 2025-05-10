@@ -245,3 +245,8 @@ li {
   border-radius: 50%;
   width: 50px;
 }
+
+.time-range-button {
+  background-color: #282828;
+  border-radius: 20%;
+}
