@@ -1,11 +1,10 @@
 # 🎵 enc.stats 
 
-A lightweight **Flask** web application that connects to a user's **Spotify account** and provides a detailed rundown of their listening habits. Built with **Spotipy**, this app fetches and displays top artists, albums, and tracks over different time ranges.  
+A lightweight **Flask** web application that connects to a user's **Spotify account** and provides a detailed rundown of their listening habits. Built with **Spotipy**, this app fetches and displays top artists, albums, and tracks.  
 
 ## 🚀 Features  
 - 🔑 **Spotify OAuth Authentication** – Secure login via Spotify  
 - 🎶 **Top Artists & Tracks** – View your most listened-to content  
-- ⏳ **Custom Time Ranges** – Short-term, medium-term, and long-term stats  
 - ⚡ **Minimal & Fast** – Small Flask backend with efficient API calls  
 
 ## 🛠 Tech Stack  
@@ -40,7 +39,8 @@ A lightweight **Flask** web application that connects to a user's **Spotify acco
 
 
 
-3.**Finally, all of your data is shown in a neat and user-friendly way with options to see top artists, songs, or albums**
+3.**Finally, all of your data is shown in a neat and user-friendly way with options to see top artists and songs.**
 
-![Screenshot 2025-03-18 171748](https://github.com/user-attachments/assets/fca69d5a-6e28-4ba7-adf8-2166e856888b)
+![image](https://github.com/user-attachments/assets/6a338ada-f25f-408b-bc0e-fc8e350ee42f)
+
 
