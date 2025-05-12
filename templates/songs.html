@@ -7,17 +7,24 @@
       <div class="list">
         <div class="recent-songs-container">
           <h2 class="recent-h2">Recent Top Songs</h2>
-          <div class="select-timeframe">
-            <button class="time-range-button" id="short_term">
-              Short Term
-            </button>
-            <button class="time-range-button" id="medium_term">
-              Medium Term
-            </button>
-            <button class="time-range-button" id="long_term">Long Term</button>
-          </div>
         </div>
-        <ul id="song-list-container" data-top-songs="{{ top_songs }}"></ul>
+        <ul id="song-list-container">
+          {% for song in top_songs %}
+          <li class="song-item">
+            <span>{{ loop.index }}.</span>
+            <img
+              src="{{ song.album.images[0].url }}"
+              alt="{{ song.name }}"
+              width="50"
+              height="50"
+            />
+            <p>
+              {{ song.name }} - {{ song.artists[0].name if song.artists else
+              'Unknown Artist' }}
+            </p>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

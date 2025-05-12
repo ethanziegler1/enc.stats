@@ -66,10 +66,9 @@ def songs():
     sp = Spotify(auth=token_info["access_token"])
     user = sp.current_user()
     top_songs = sp.current_user_top_tracks(limit=10)["items"]
-    top_artists = sp.current_user_top_artists(limit=10)["items"]
 
     return render_template(
-        "songs.html", user=user, top_songs=top_songs, top_artists=top_artists
+        "songs.html", user=user, top_songs=top_songs
     )
 
 
@@ -92,18 +91,6 @@ def artists():
     top_artists = sp.current_user_top_artists(limit=10)["items"]
 
     return render_template("artists.html", user=user, top_artists=top_artists)
-
-
-@app.route("/search")
-def search():
-    """Search for a song or artist."""
-    token_info = session.get("token_info", None)
-    if not token_info:
-        return redirect(url_for("home"))
-    sp = Spotify(auth=token_info["access_token"])
-    user = sp.current_user()
-    lucki = sp.search("lucki", type="track")
-    return render_template("search.html", user=user, lucki=lucki)
 
 
 if __name__ == "__main__":

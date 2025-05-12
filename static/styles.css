@@ -227,26 +227,3 @@ li {
 .login-container a {
   text-decoration: none;
 }
-
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  vertical-align: middle;
-}
-.search-text {
-  border-radius: 10px;
-  text-align: center;
-  width: 25rem;
-  height: 3rem;
-}
-.search-button {
-  border-radius: 50%;
-  width: 50px;
-}
-
-.time-range-button {
-  background-color: #282828;
-  border-radius: 20%;
-}
