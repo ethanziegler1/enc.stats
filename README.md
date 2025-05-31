@@ -41,6 +41,8 @@ A lightweight **Flask** web application that connects to a user's **Spotify acco
 
 3.**Finally, all of your data is shown in a neat and user-friendly way with options to see top artists and songs.**
 
-![image](https://github.com/user-attachments/assets/6a338ada-f25f-408b-bc0e-fc8e350ee42f)
+![image](https://github.com/user-attachments/assets/e8267cd8-3e2e-430a-818d-413dc5639b4e)
+
+![image](https://github.com/user-attachments/assets/53ce9f9d-0a8c-42c6-8ee3-8a1f3e34e9a6)
 
 
