@@ -3,18 +3,16 @@
   {%include 'header.html'%}
   <div class="container">
     <div class="content">
-      <div class="list">
-        <h2>Top Artists</h2>
+      <div class="artist-list">
+        <h2 style="text-align: center">Recent Top Artists</h2>
         <ul>
           {% for artist in top_artists %}
-          <li class="artist-item">
-            <span>{{ loop.index }}.</span>
-            <img
-              src="{{ artist.images[0].url }}"
-              alt="{{ artist.name }}"
-              width="50"
-              height="50"
-            />
+          <li
+            class="artist-item"
+            onmouseover="this.style.boxShadow='0 0 10px green';"
+            onmouseout="this.style.boxShadow='none';"
+            style="background-image: url('{{ artist.images[0].url }}');"
+          >
             <p>{{ artist.name }}</p>
           </li>
           {% endfor %}
